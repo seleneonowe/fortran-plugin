@@ -79,6 +79,7 @@
         <lang.findUsagesProvider language="Fortran"
                                  implementationClass="org.jetbrains.fortran.ide.findUsages.FortranFindUsagesProvider"/>
         <usageTypeProvider implementation="org.jetbrains.fortran.ide.findUsages.FortranUsageTypeProvider"/>
+        <readWriteAccessDetector implementation="org.jetbrains.fortran.ide.findUsages.FortranReadWriteAccessDetector"/>
         <findUsagesHandlerFactory
                 implementation="org.jetbrains.fortran.ide.findUsages.FortranFindUsagesHandlerFactory"/>
 
@@ -171,7 +172,9 @@
                          enabledByDefault="true" level="WARNING"
                          applyToDialects="false"
                          implementationClass="org.jetbrains.fortran.ide.inspections.FortranTypeCheckInspection"/>
-
+        <!-- Docs -->
+        <lang.documentationProvider language="Fortran"
+                                    implementationClass="org.jetbrains.fortran.ide.docs.FortranDocumentationProvider"/>
     </extensions>
 
     <actions>
